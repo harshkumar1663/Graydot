@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drag and Drop Example</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div id="container1">
+                <h3>Container 1</h3>
+                <img id="image1" src="./images/img1.jpg" draggable="true" ondragstart="drag(event, 'image1')" />
+                <img id="image2" src="./images/img2.jpg" draggable="true" ondragstart="drag(event, 'image2')" />
+                <img id="image3" src="./images/img3.jpg" draggable="true" ondragstart="drag(event, 'image3')" />
+                <img id="image4" src="./images/img4.jpg" draggable="true" ondragstart="drag(event, 'image4')" />
+                <img id="image5" src="./images/img5.jpg" draggable="true" ondragstart="drag(event, 'image5')" />
+            </div>
+            <div id="container2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h3>Container 2</h3>
+            </div>
+        </div>
+        <div class="btn-msg">
+            <div id="successMessage" class="success-message"></div>
+            <button class="btn" onclick="resetContainers()">Reset</button>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
